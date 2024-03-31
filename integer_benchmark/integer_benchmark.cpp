@@ -20,4 +20,10 @@ int main()
             result = k + l;
         }
     }
+
+    for (int i = 0; i < 5; i++)
+    {
+        for (int j = 0; j < exp_billion; j++)
+            result = k * l;
+    }
 }
