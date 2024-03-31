@@ -21,4 +21,12 @@ int main(){
             test_number = 1.5 * 2.5;
     }
 
+    for (int i = 0; i < 2; i++)
+    {
+        for (int j = 0; j < 1000000000; j++)
+        {
+            test_number = 2.5 / 1.5;
+        }
+    }
+
 }
