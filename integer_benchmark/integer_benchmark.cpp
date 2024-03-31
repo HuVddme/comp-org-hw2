@@ -34,4 +34,11 @@ int main()
             result = l / k;
         }
     }
+
+    auto stop_main = high_resolution_clock::now();
+    auto final_time = duration_cast<milliseconds>(stop_main - start_main).count();
+    cout << "Time: " << final_time << "ms" << endl;
+
+
+    return 0;
 }
