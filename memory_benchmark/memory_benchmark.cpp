@@ -15,4 +15,8 @@ int main() {
     for (long long i = 0; i < size_array; i++) {
         temp_data = array_data[i];
     }
+
+    for (long long i = 0; i < size_array; i++) {
+        array_data[i] = 1;
+    }
 }
