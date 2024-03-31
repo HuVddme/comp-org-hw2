@@ -9,4 +9,10 @@ int main() {
   
     int* array_data = new int[size_array]; 
     int temp_data;
+
+    auto start_main = high_resolution_clock::now();
+
+    for (long long i = 0; i < size_array; i++) {
+        temp_data = array_data[i];
+    }
 }
