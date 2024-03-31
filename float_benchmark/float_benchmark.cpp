@@ -29,4 +29,9 @@ int main(){
         }
     }
 
+    auto end = high_resolution_clock::now();
+    auto benchmark_time = duration_cast<milliseconds>(end - begin).count();
+    cout << "Time: " << benchmark_time << "ms" << endl;
+
+
 }
