@@ -19,4 +19,9 @@ int main() {
     for (long long i = 0; i < size_array; i++) {
         array_data[i] = 1;
     }
+
+    auto stop = high_resolution_clock::now();
+    auto final_time = duration_cast<milliseconds>(stop - start_main).count();
+    cout << "Time: " << final_time << "ms" << endl;
+    return 0;
 }
