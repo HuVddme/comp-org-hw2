@@ -26,4 +26,12 @@ int main()
         for (int j = 0; j < exp_billion; j++)
             result = k * l;
     }
+
+    for (int i = 0; i < 2; i++)
+    {
+        for (int j = 0; j < exp_billion; j++)
+        {
+            result = l / k;
+        }
+    }
 }
