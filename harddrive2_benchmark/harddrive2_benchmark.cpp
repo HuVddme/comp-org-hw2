@@ -34,4 +34,10 @@ int main() {
         inputFile.read(dataSection, SECTION_SIZE);
     }
     auto endRead = high_resolution_clock::now();
+
+    inputFile.close();
+
+    auto readingTime = duration_cast<milliseconds>(endRead - startRead).count();
+
+    cout << "Total Time: " << (readingTime + writingTime) << "ms" << endl;
 }
