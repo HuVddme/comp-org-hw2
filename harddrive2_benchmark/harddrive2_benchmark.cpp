@@ -23,4 +23,9 @@ int main() {
     }
     auto endWrite = high_resolution_clock::now();
     auto writingTime = duration_cast<milliseconds>(endWrite - startWrite).count();
+
+     outputFile.close();
+
+    // Open the file for reading
+    ifstream inputFile("sample.txt", ios::binary);
 }
