@@ -4,16 +4,22 @@
 using namespace std;
 using namespace std::chrono;
 
-const long long total_bytes = 1e9;
-const int sect_size = 100;
+const long long totalBytes = 1e9;
+const int sectSize = 100;
 
 int main() {
-    ofstream outFile("sample.txt", ios::binary);
+    ofstream outputFile("sample.txt", ios::binary);
 
-    char buffer[sect_size];
-    for (int i = 0; i < sect_size; i++) {
+    char buffer[sectSize];
+    for (int i = 0; i < sectSize; i++) {
         buffer[i] = 'x';
     
+    }
+
+    // Measure writing time
+    auto startWrite = high_resolution_clock::now();
+    for (long long i = 0; i < totalBytes; i += sectSize) {
+        outputFile.write(buffer, sectSize);
     }
 
 }
