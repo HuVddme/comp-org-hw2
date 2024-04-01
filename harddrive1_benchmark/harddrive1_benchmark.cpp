@@ -22,4 +22,19 @@ int main() {
         outputFile.write(buffer, sectSize);
     }
 
+    auto endWrite = high_resolution_clock::now();
+    auto writingTime = duration_cast<milliseconds>(endWrite - startWrite).count();
+
+    outputFile.close();
+
+    // Open input file stream
+    ifstream inputFile("sample.txt", ios::binary);
+
+    // Measure reading time
+    auto startRead = high_resolution_clock::now();
+    for (long long i = 0; i < totalBytes; i += sectSize) {
+        inputFile.read(buffer, sectSize);
+    }
+    auto endRead = high_resolution_clock::now();
+
 }
