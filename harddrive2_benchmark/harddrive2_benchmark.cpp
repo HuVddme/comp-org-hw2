@@ -15,4 +15,12 @@ int main() {
     for (int i = 0; i < SECTION_SIZE; i++) {
         dataSection[i] = 'x';
     }
+
+    // Measure writing time 
+    auto startWrite = high_resolution_clock::now();
+    for (long long i = 0; i < TOTAL_BYTES; i += SECTION_SIZE) {
+        outputFile.write(dataSection, SECTION_SIZE);
+    }
+    auto endWrite = high_resolution_clock::now();
+    auto writingTime = duration_cast<milliseconds>(endWrite - startWrite).count();
 }
