@@ -28,4 +28,10 @@ int main() {
 
     // Open the file for reading
     ifstream inputFile("sample.txt", ios::binary);
+
+    auto startRead = high_resolution_clock::now();
+    for (long long i = 0; i < TOTAL_BYTES; i += SECTION_SIZE) {
+        inputFile.read(dataSection, SECTION_SIZE);
+    }
+    auto endRead = high_resolution_clock::now();
 }
